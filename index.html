@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Martin Gayot — Account Manager CV</title>
+<meta name="description" content="Interactive CV of Martin Gayot, applying for the Account Manager role at Scrambly.">
+<style>
+:root{--bg:#f7f6fb;--card:#fff;--ink:#1d1b2e;--mute:#5d5b73;--acc:#4b3f8f;--acc2:#ece9f6;--line:#e2dff0}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#13121c;--card:#1c1a2a;--ink:#ecebf5;--mute:#a4a2bb;--acc:#a99cf0;--acc2:#2a2742;--line:#2f2c47}}
+:root[data-theme=dark]{--bg:#13121c;--card:#1c1a2a;--ink:#ecebf5;--mute:#a4a2bb;--acc:#a99cf0;--acc2:#2a2742;--line:#2f2c47}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+.wrap{max-width:860px;margin:0 auto;padding:0 16px 64px}
+header{display:flex;justify-content:space-between;align-items:center;padding:20px 0}
+.btn{border:1px solid var(--line);background:var(--card);color:var(--ink);padding:8px 14px;border-radius:999px;font:inherit;font-size:14px;cursor:pointer;text-decoration:none;display:inline-block}
+.btn.primary{background:var(--acc);color:#fff;border-color:var(--acc)}
+.btn.primary{color:#fff}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]) .btn.primary{color:#13121c}}
+:root[data-theme=dark] .btn.primary{color:#13121c}
+.hero{padding:28px 0 8px}
+.hero h1{font-size:clamp(34px,6vw,52px);line-height:1.05;margin:0 0 8px;letter-spacing:-.02em}
+.hero p{color:var(--mute);margin:0 0 18px;max-width:640px;font-size:18px}
+.cta{display:flex;gap:10px;flex-wrap:wrap}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:28px 0}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px}
+.stat b{display:block;font-size:30px;color:var(--acc);letter-spacing:-.02em}
+.stat span{color:var(--mute);font-size:14px}
+h2{font-size:14px;letter-spacing:.12em;text-transform:uppercase;color:var(--acc);margin:40px 0 12px}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.chip{border:1px solid var(--line);background:var(--card);color:var(--ink);padding:6px 12px;border-radius:999px;font:inherit;font-size:14px;cursor:pointer}
+.chip[aria-pressed=true]{background:var(--acc);color:#fff;border-color:var(--acc)}
+:root[data-theme=dark] .chip[aria-pressed=true]{color:#13121c}
+.job{background:var(--card);border:1px solid var(--line);border-radius:14px;margin-bottom:10px;overflow:hidden;transition:opacity .2s}
+.job.dim{opacity:.35}
+.job button{all:unset;display:flex;justify-content:space-between;gap:12px;width:100%;padding:16px;cursor:pointer;box-sizing:border-box}
+.job button:focus-visible,.chip:focus-visible,.btn:focus-visible,.tab:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+.job h3{margin:0;font-size:17px}.job small{color:var(--mute)}
+.job .body{display:none;padding:0 16px 16px;color:var(--ink)}
+.job.open .body{display:block}.job .body ul{margin:8px 0 0;padding-left:20px}.job .body li{margin-bottom:6px}
+.caret{transition:transform .2s;color:var(--mute)}.job.open .caret{transform:rotate(90deg)}
+.tabs{display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap}
+.tab{border:1px solid var(--line);background:var(--card);color:var(--ink);padding:8px 14px;border-radius:10px;font:inherit;cursor:pointer}
+.tab[aria-selected=true]{background:var(--acc2);border-color:var(--acc);color:var(--acc);font-weight:600}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px}
+.panel ul{margin:0;padding-left:20px}.panel li{margin-bottom:6px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:620px){.two{grid-template-columns:1fr}}
+.note{background:var(--acc2);border-radius:14px;padding:16px}
+.note ul{margin:6px 0 0;padding-left:20px}
+footer{margin-top:40px;color:var(--mute);font-size:14px}
+@media print{header,.cta,.chips,.tabs,footer .btn{display:none}.job .body{display:block!important}.job.dim{opacity:1}body{background:#fff;color:#000}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <strong>MG</strong>
+  <button class="btn" id="theme" aria-label="Toggle light or dark theme">Toggle theme</button>
+</header>
+
+<section class="hero">
+  <h1>Martin Gayot</h1>
+  <p>Account manager and seller who builds relationships, reads the numbers, and grows partners over time. Applying for the Account Manager role at Scrambly.</p>
+  <div class="cta">
+    <a class="btn primary" href="mailto:martinhgayot@outlook.com?subject=Scrambly%20Account%20Manager">Email me</a>
+    <button class="btn" onclick="window.print()">Save as PDF</button>
+  </div>
+</section>
+
+<section class="stats" aria-label="Key numbers">
+  <div class="stat"><b data-to="236">0</b><span>accounts built from scratch</span></div>
+  <div class="stat"><b data-to="7">0</b><span>countries covered</span></div>
+  <div class="stat"><b data-to="18" data-suf="%+">0</b><span>YoY growth at Vacasa</span></div>
+  <div class="stat"><b data-to="38" data-suf="%">0</b><span>close rate at Rethink Wealth</span></div>
+</section>
+
+<h2>Experience</h2>
+<div class="chips" id="chips" role="group" aria-label="Filter experience by skill">
+  <button class="chip" aria-pressed="false" data-k="accounts">Account management</button>
+  <button class="chip" aria-pressed="false" data-k="outbound">Outbound</button>
+  <button class="chip" aria-pressed="false" data-k="data">Data &amp; analysis</button>
+  <button class="chip" aria-pressed="false" data-k="people">Leading people</button>
+</div>
+
+<div id="jobs">
+  <article class="job open" data-k="accounts outbound people">
+    <button aria-expanded="true"><div><h3>Central America Market Lead — Vacasa</h3><small>Jan 2022 – Oct 2024 · Remote</small></div><span class="caret">▸</span></button>
+    <div class="body"><ul>
+      <li>Led the company's first expansion into Central America and worked with engineers to adapt the software and channel integrations for the new market.</li>
+      <li>Built a 236-account portfolio across 7 countries from scratch and grew it 18%+ YoY; named LATAM Growth Leader.</li>
+      <li>Self-sourced 100% of early pipeline through cold calling (about 200 calls a week), door-to-door visits and conferences; by year three referrals were 35-40% of new clients.</li>
+      <li>Sold to buyers from individual owners to enterprise groups such as Marriott, Best Western and Radisson, then handed clients to onboarding.</li>
+      <li>Hired and led a small sales team; kept pipeline and reporting current in Salesforce and HubSpot.</li>
+    </ul></div>
+  </article>
+  <article class="job" data-k="outbound data">
+    <button aria-expanded="false"><div><h3>Financial Advisor — Rethink Wealth / Guardian</h3><small>Oct 2024 – Mar 2026 · Fort Worth, TX</small></div><span class="caret">▸</span></button>
+    <div class="body"><ul>
+      <li>About 20 cold or warm calls a day, plus discovery and planning calls.</li>
+      <li>Met a monthly target of 2 new clients and 3 signed policies; closed about 38% of qualified conversations.</li>
+      <li>Top 20% of 55 agents in year one; deputy compliance officer for 75+ advisors.</li>
+    </ul></div>
+  </article>
+  <article class="job" data-k="accounts data">
+    <button aria-expanded="false"><div><h3>Founder — Canopy Consulting</h3><small>Apr 2022 – Dec 2025 · Belize, remote</small></div><span class="caret">▸</span></button>
+    <div class="body"><ul>
+      <li>Won 21+ clients independently from a cold start, including CRM implementation and sales-process design.</li>
+      <li>Used AI tools to run first-pass analysis on large datasets for a resort client.</li>
+    </ul></div>
+  </article>
+  <article class="job" data-k="data">
+    <button aria-expanded="false"><div><h3>Financial Auditor — Deloitte Luxembourg</h3><small>Feb 2019 – May 2021</small></div><span class="caret">▸</span></button>
+    <div class="body"><ul>
+      <li>Analyzed financial data for private equity and alternative investment funds with international teams under tight deadlines.</li>
+    </ul></div>
+  </article>
+</div>
+
+<h2>How I'd start at Scrambly</h2>
+<div class="tabs" role="tablist" aria-label="Plan">
+  <button class="tab" role="tab" aria-selected="true" data-p="p30">First 30 days</button>
+  <button class="tab" role="tab" aria-selected="false" data-p="p60">Days 31-60</button>
+  <button class="tab" role="tab" aria-selected="false" data-p="p90">Days 61-90</button>
+</div>
+<div class="panel" id="panel"></div>
+
+<h2>What I'm upfront about</h2>
+<div class="note">
+  <strong>I haven't worked in adtech yet.</strong>
+  <ul>
+    <li>No hands-on experience with mobile attribution tools (AppsFlyer, Adjust) or CPA, CPI and CPE campaign models, and I'm already learning them.</li>
+    <li>My strengths are relationships, numbers, negotiation and a disciplined process, and I pick up new products fast.</li>
+  </ul>
+</div>
+
+<h2>Education &amp; languages</h2>
+<div class="two">
+  <div class="panel"><strong>MSc International Business</strong><br>Solvay Brussels School, with distinction<br><br><strong>BSc Business Communications</strong><br>Emlyon Business School, honors, top 15%</div>
+  <div class="panel"><strong>Languages</strong><ul><li>French: native</li><li>English: fluent</li><li>Spanish: intermediate, improving daily</li></ul>Based in Spain, EU citizen authorized to work here, available immediately.</div>
+</div>
+
+<footer>
+  <p>Let's talk: <a href="mailto:martinhgayot@outlook.com" style="color:var(--acc)">martinhgayot@outlook.com</a></p>
+</footer>
+</div>
+
+<script>
+// Theme toggle
+var root=document.documentElement;
+try{var t=localStorage.getItem('theme');if(t)root.dataset.theme=t}catch(e){}
+document.getElementById('theme').onclick=function(){
+  var dark=(root.dataset.theme||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'))==='dark';
+  root.dataset.theme=dark?'light':'dark';
+  try{localStorage.setItem('theme',root.dataset.theme)}catch(e){}
+};
+// Counters
+document.querySelectorAll('.stat b').forEach(function(el){
+  var to=+el.dataset.to,suf=el.dataset.suf||'',n=0,step=Math.max(1,Math.ceil(to/40));
+  var id=setInterval(function(){n=Math.min(to,n+step);el.textContent=n+(n===to?suf:'');if(n===to)clearInterval(id)},25);
+});
+// Accordion
+document.querySelectorAll('.job > button').forEach(function(b){
+  b.onclick=function(){var j=b.parentElement,o=j.classList.toggle('open');b.setAttribute('aria-expanded',o)}
+});
+// Filter chips
+var active={};
+document.querySelectorAll('.chip').forEach(function(c){
+  c.onclick=function(){
+    var k=c.dataset.k;active[k]=!active[k];c.setAttribute('aria-pressed',!!active[k]);
+    var keys=Object.keys(active).filter(function(x){return active[x]});
+    document.querySelectorAll('.job').forEach(function(j){
+      var has=keys.length===0||keys.some(function(x){return j.dataset.k.split(' ').indexOf(x)>-1});
+      j.classList.toggle('dim',!has);
+    });
+  };
+});
+// Plan tabs
+var plan={
+ p30:['Learn the product, the reward mechanics and the advertiser landscape.','Learn MMPs (AppsFlyer, Adjust) and the CPA, CPI and CPE models in depth.','Shadow campaign setups and calls; take on a first small advertiser.'],
+ p60:['Own onboarding for new advertisers and the day-to-day campaign setup.','Review campaign data weekly and bring concrete optimization ideas to partners.','Start spotting upsell opportunities within my accounts.'],
+ p90:['Run regular strategy calls with my advertisers and deliver clear project updates.','Build a repeatable routine for optimization and reporting.','Share competitor and market insights with the team to help grow revenue.']
+};
+function show(k){document.getElementById('panel').innerHTML='<ul>'+plan[k].map(function(x){return'<li>'+x+'</li>'}).join('')+'</ul>'}
+show('p30');
+document.querySelectorAll('.tab').forEach(function(t){
+  t.onclick=function(){document.querySelectorAll('.tab').forEach(function(o){o.setAttribute('aria-selected',o===t)});show(t.dataset.p)}
+});
+</script>
+</body>
+</html>
